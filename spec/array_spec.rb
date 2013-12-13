@@ -39,7 +39,7 @@ describe Array do
     end
 
     it "concatenate an array of strings" do
-      expect(["I ", "can ", "haz ", "sticker", "?"].shoot(&:+)).to eq("I can haz sticker?")
+      expect(["I ", "can ", "haz ", "sticker", "?"].shoot(&:+)).to eq("I can haz sticker?") # yes
     end
   end
 end
