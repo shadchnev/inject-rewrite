@@ -13,5 +13,9 @@ describe Array do
     it "subtract all the values in the array [1000,100,10,1]" do
       expect([1000,100,10,1].shoot { |sum, number| sum - number}).to eq(889)
     end
+
+    it "divides all the values in the array [10000,10,5,10]" do
+      expect([10000,10,5,10].shoot { |sum, number| sum / number}).to eq(20)
+    end
   end
 end
