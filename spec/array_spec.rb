@@ -37,5 +37,9 @@ describe Array do
     it "take a number as an argument to be used as the first item" do
       expect([2,3,4,5].shoot(1) { |sum, number| sum + number }).to eq(15)
     end
+
+    it "concatenate an array of strings" do
+      expect(["I ", "can ", "haz ", "sticker", "?"].shoot(&:+)).to eq("I can haz sticker?")
+    end
   end
 end
