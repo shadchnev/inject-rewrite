@@ -21,5 +21,21 @@ describe Array do
     it "take a symbol (:+) as an argument instead of a block" do
       expect([1,2,3,4,5].shoot(&:+)).to eq(15)
     end
+
+    it "take a symbol (:-) as an argument instead of a block" do
+      expect([1,2,3,4,5].shoot(&:-)).to eq(-13)
+    end
+
+    it "take a symbol (:*) as an argument instead of a block" do
+      expect([1,2,3,4,5].shoot(&:*)).to eq(120)
+    end
+
+    it "take a symbol (:/) as an argument instead of a block" do
+      expect([983745,13,83,3,9].shoot(&:/)).to eq(33)
+    end
+
+    it "take a number as an argument to be used as the first item" do
+      expect([2,3,4,5].shoot(1) { |sum, number| sum + number }).to eq(15)
+    end
   end
 end
