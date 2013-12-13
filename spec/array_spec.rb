@@ -17,5 +17,9 @@ describe Array do
     it "divides all the values in the array [10000,10,5,10]" do
       expect([10000,10,5,10].shoot { |sum, number| sum / number}).to eq(20)
     end
+
+    it "take a symbol (:+)  as an argument instead of a block" do
+      expect ([1,2,3,4,5].shoot(:+)).to eq(15)
+    end
   end
 end
